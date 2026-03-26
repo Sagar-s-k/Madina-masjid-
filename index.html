@@ -118,3 +118,15 @@ nav button {
 <button onclick="show('home')">🏠 Home</button>
 <button onclick="show('timing')">🕒 Timings</button>
 <button onclick="show('gallery')">
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById("installBtn").style.display = "block";
+});
+
+document.getElementById("installBtn").addEventListener("click", () => {
+  deferredPrompt.prompt();
+});
