@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Madina Masjid</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #eef5f3;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg,#0b5d3b,#128a5a);
+    color: white;
+    padding: 20px;
+}
+
+/* Sections */
+.section {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+/* Gallery */
+.gallery img {
+    width: 30%;
+    margin: 8px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Bottom Navigation */
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #0b5d3b;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* Animation */
+.fade {
+    animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🕌 Madina Masjid</h1>
+<p>🌙 A place of peace, prayer, and unity</p>
+</header>
+
+<!-- HOME -->
+<div id="home" class="section active fade">
+<h2>Welcome</h2>
+<p>Welcome to Madina Masjid website</p>
+</div>
+
+<!-- TIMINGS -->
+<div id="timing" class="section fade">
+<h2>🕒 Live Namaz Timings</h2>
+<p id="fajr">Loading...</p>
+<p id="dhuhr">Loading...</p>
+<p id="asr">Loading...</p>
+<p id="maghrib">Loading...</p>
+<p id="isha">Loading...</p>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section fade">
+<h2>📸 Gallery</h2>
+<div class="gallery">
+<img src="https://i.ibb.co/23X1Gd8Y/Screenshot-20260326-085346.webp">
+<img src="https://i.ibb.co/s9z23tYk/Screenshot-20260326-085354.webp">
+<img src="https://i.ibb.co/fdxFxHvp/Screenshot-20260326-085402.webp">
+</div>
+</div>
+
+<!-- LOCATION -->
+<div id="location" class="section fade">
+<h2>📍 Location</h2>
+<a href="https://maps.app.goo.gl/Lyiqp3gc8xWF9gTc8?g_st=ac">Open Map</a>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+<button onclick="show('home')">🏠 Home</button>
+<button onclick="show('timing')">🕒 Timings</button>
+<button onclick="show('gallery')">
